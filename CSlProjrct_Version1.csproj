@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{448483E6-E797-4620-AC13-8BC41B7BEAF5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CSlProjrct_Version1</RootNamespace>
+    <AssemblyName>CSlProjrct_Version1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form_AllStudents_Result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AllStudents_Result.Designer.cs">
+      <DependentUpon>Form_AllStudents_Result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_logIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_logIn.Designer.cs">
+      <DependentUpon>Form_logIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_studentHomw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_studentHomw.Designer.cs">
+      <DependentUpon>Form_studentHomw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_exam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_exam.designer.cs">
+      <DependentUpon>Form_exam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\AddChoiceQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\AddChoiceQ.designer.cs">
+      <DependentUpon>AddChoiceQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\AddTAndFQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\AddTAndFQ.designer.cs">
+      <DependentUpon>AddTAndFQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\AddTextQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\AddTextQ.designer.cs">
+      <DependentUpon>AddTextQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\Deleting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\Deleting.designer.cs">
+      <DependentUpon>Deleting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\EditAllQuetions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\EditAllQuetions.designer.cs">
+      <DependentUpon>EditAllQuetions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\UpatingTandFQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\UpatingTandFQ.designer.cs">
+      <DependentUpon>UpatingTandFQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\updatingChoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\updatingChoices.designer.cs">
+      <DependentUpon>updatingChoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\UpdatingText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\UpdatingText.designer.cs">
+      <DependentUpon>UpdatingText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\UserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\UserControl2.designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\UserControl3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\UserControl3.designer.cs">
+      <DependentUpon>UserControl3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\UserControl4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Instructor_AddQuestions_Forms\UserControl4.designer.cs">
+      <DependentUpon>UserControl4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor_create_ExamForms\instractorform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructor_create_ExamForms\instractorform.designer.cs">
+      <DependentUpon>instractorform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor_create_ExamForms\Instructor_dashBooard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructor_create_ExamForms\Instructor_dashBooard.Designer.cs">
+      <DependentUpon>Instructor_dashBooard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor_create_ExamForms\welcomform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructor_create_ExamForms\welcomform.designer.cs">
+      <DependentUpon>welcomform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\AddInstructorToCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\AddInstructorToCourse.Designer.cs">
+      <DependentUpon>AddInstructorToCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\BranchDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\BranchDeleteForm.Designer.cs">
+      <DependentUpon>BranchDeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\BranchInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\BranchInsertForm.Designer.cs">
+      <DependentUpon>BranchInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\BranchUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\BranchUpdateForm.Designer.cs">
+      <DependentUpon>BranchUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\CourseDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\CourseDeleteForm.Designer.cs">
+      <DependentUpon>CourseDeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\CourseInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\CourseInsertForm.Designer.cs">
+      <DependentUpon>CourseInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\CourseUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\CourseUpdateForm.Designer.cs">
+      <DependentUpon>CourseUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\InstructorDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\InstructorDeleteForm.Designer.cs">
+      <DependentUpon>InstructorDeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\InstructorInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\InstructorInsertForm.Designer.cs">
+      <DependentUpon>InstructorInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\InstructorUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\InstructorUpdateForm.Designer.cs">
+      <DependentUpon>InstructorUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\IntakeDaleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\IntakeDaleteForm.Designer.cs">
+      <DependentUpon>IntakeDaleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\IntakeInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\IntakeInsertForm.Designer.cs">
+      <DependentUpon>IntakeInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\IntakeUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\IntakeUpdateForm.Designer.cs">
+      <DependentUpon>IntakeUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\MainUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\MainUserControl.Designer.cs">
+      <DependentUpon>MainUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\StudentDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\StudentDeleteForm.Designer.cs">
+      <DependentUpon>StudentDeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\StudentInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\StudentInsertForm.Designer.cs">
+      <DependentUpon>StudentInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\StudentUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\StudentUpdateForm.Designer.cs">
+      <DependentUpon>StudentUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\TrackDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\TrackDeleteForm.Designer.cs">
+      <DependentUpon>TrackDeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\TrackInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\TrackInsertForm.Designer.cs">
+      <DependentUpon>TrackInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForms\TrackUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForms\TrackUpdateForm.Designer.cs">
+      <DependentUpon>TrackUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210111346172_init.cs" />
+    <Compile Include="Migrations\202210111346172_init.designer.cs">
+      <DependentUpon>202210111346172_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210111546220_init2.cs" />
+    <Compile Include="Migrations\202210111546220_init2.designer.cs">
+      <DependentUpon>202210111546220_init2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210112127504_init3.cs" />
+    <Compile Include="Migrations\202210112127504_init3.designer.cs">
+      <DependentUpon>202210112127504_init3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210141003002_init4.cs" />
+    <Compile Include="Migrations\202210141003002_init4.designer.cs">
+      <DependentUpon>202210141003002_init4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AllowanceOption.cs" />
+    <Compile Include="Models\Branch.cs" />
+    <Compile Include="Models\ConfigurationsExam.cs" />
+    <Compile Include="Models\Context.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Exam.cs" />
+    <Compile Include="Models\ExamQuestionsChoice.cs" />
+    <Compile Include="Models\ExamQuestionsText.cs" />
+    <Compile Include="Models\ExamQuestionsTF.cs" />
+    <Compile Include="Models\ExamsLip.cs" />
+    <Compile Include="Models\Instructor.cs" />
+    <Compile Include="Models\Intake.cs" />
+    <Compile Include="Models\QuestionstChoice.cs" />
+    <Compile Include="Models\QuestionstText.cs" />
+    <Compile Include="Models\QuestionstTF.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentAnswer.cs" />
+    <Compile Include="Models\StudentAnswerSheet.cs" />
+    <Compile Include="Models\Track.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_AllStudents_Result.resx">
+      <DependentUpon>Form_AllStudents_Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_logIn.resx">
+      <DependentUpon>Form_logIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_studentHomw.resx">
+      <DependentUpon>Form_studentHomw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_exam.resx">
+      <DependentUpon>Form_exam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor_AddQuestions_Forms\AddChoiceQ.resx">
+      <DependentUpon>AddChoiceQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor_AddQuestions_Forms\AddTAndFQ.resx">
+      <DependentUpon>AddTAndFQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor_AddQuestions_Forms\AddTextQ.resx">
+      <DependentUpon>AddTextQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor_AddQuestions_Forms\Deleting.resx">
+      <DependentUpon>Deleting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor_AddQuestions_Forms\EditAllQuetions.resx">
+      <DependentUpon>EditAllQuetions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor_AddQuestions_Forms\UpatingTandFQ.resx">
+      <DependentUpon>UpatingTandFQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor_AddQuestions_Forms\updatingChoices.resx">
+      <DependentUpon>updatingChoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor_AddQuestions_Forms\UpdatingText.resx">
+      <DependentUpon>UpdatingText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor_AddQuestions_Forms\UserControl2.resx">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor_AddQuestions_Forms\UserControl3.resx">
+      <DependentUpon>UserControl3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor_AddQuestions_Forms\UserControl4.resx">
+      <DependentUpon>UserControl4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor_create_ExamForms\instractorform.resx">
+      <DependentUpon>instractorform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor_create_ExamForms\Instructor_dashBooard.resx">
+      <DependentUpon>Instructor_dashBooard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor_create_ExamForms\welcomform.resx">
+      <DependentUpon>welcomform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\AddInstructorToCourse.resx">
+      <DependentUpon>AddInstructorToCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\BranchDeleteForm.resx">
+      <DependentUpon>BranchDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\BranchInsertForm.resx">
+      <DependentUpon>BranchInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\BranchUpdateForm.resx">
+      <DependentUpon>BranchUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\CourseDeleteForm.resx">
+      <DependentUpon>CourseDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\CourseInsertForm.resx">
+      <DependentUpon>CourseInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\CourseUpdateForm.resx">
+      <DependentUpon>CourseUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\InstructorDeleteForm.resx">
+      <DependentUpon>InstructorDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\InstructorInsertForm.resx">
+      <DependentUpon>InstructorInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\InstructorUpdateForm.resx">
+      <DependentUpon>InstructorUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\IntakeDaleteForm.resx">
+      <DependentUpon>IntakeDaleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\IntakeInsertForm.resx">
+      <DependentUpon>IntakeInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\IntakeUpdateForm.resx">
+      <DependentUpon>IntakeUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\MainUserControl.resx">
+      <DependentUpon>MainUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\StudentDeleteForm.resx">
+      <DependentUpon>StudentDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\StudentInsertForm.resx">
+      <DependentUpon>StudentInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\StudentUpdateForm.resx">
+      <DependentUpon>StudentUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\TrackDeleteForm.resx">
+      <DependentUpon>TrackDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\TrackInsertForm.resx">
+      <DependentUpon>TrackInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForms\TrackUpdateForm.resx">
+      <DependentUpon>TrackUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210111346172_init.resx">
+      <DependentUpon>202210111346172_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210111546220_init2.resx">
+      <DependentUpon>202210111546220_init2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210112127504_init3.resx">
+      <DependentUpon>202210112127504_init3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210141003002_init4.resx">
+      <DependentUpon>202210141003002_init4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
